@@ -5,6 +5,7 @@
   --color-dark: rgba(27, 27, 27, 0.91);
   --color-gray: #ebebeb;
   --color-white: #fff;
+  /* --percent-90: 90%; */
 }
 
 body,
@@ -203,4 +204,129 @@ ul {
   -webkit-text-stroke: 2px var(--color-black);
   font-weight: normal;
   color: transparent;
+}
+
+.statistics {
+  background: linear-gradient(rgba(251, 195, 54, 0.9), rgba(251, 195, 54, 0.9)),
+    url(img/statistics-photo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  padding: 133px 0;
+}
+
+.statistics__row {
+  display: flex;
+  gap: 89px;
+}
+
+.statistics__info {
+  max-width: 375px;
+}
+
+.label_white {
+  background-color: var(--color-white);
+}
+.statistics__heading {
+  font-size: 45px;
+  margin-top: 22px;
+  margin-bottom: 20px;
+}
+
+.statistics__items {
+  display: flex;
+  gap: 80px;
+}
+/*
+.statistics__range {
+  appearance: none;
+  background: none;
+}
+
+.statistics__range::-webkit-slider-runnable-track {
+  background-color: #4eaf4e;
+  border-radius: 30px;
+}
+.statistics__range::-webkit-slider-thumb {
+  appearance: none;
+  background-color: #151515;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+*/
+
+.statistics__range-wrapper {
+  width: 186px;
+  height: 186px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.statistics__range-consistency {
+  background-image: conic-gradient(#fff 85%, rgb(218, 174, 60) 0%);
+}
+.statistics__range-improvement {
+  background-image: conic-gradient(#fff 95%, rgb(218, 174, 60) 0%);
+}
+.statistics__range-branching {
+  background-image: conic-gradient(#fff 90%, rgb(218, 174, 60) 0%);
+}
+
+.statistics__range-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 176px;
+  height: 176px;
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+}
+
+.statistics__range-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: #000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.statistics__range-consistency::before {
+  top: 30px;
+}
+.statistics__range-improvement::before {
+  top: -8px;
+  left: 50px;
+}
+.statistics__range-branching::before {
+  top: 10px;
+  left: 17px;
+}
+
+.statistics__procent {
+  font-weight: bold;
+  font-size: 50px;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.statistics__item {
+  text-align: center;
+}
+.statistics__label {
+  display: inline-block;
+  margin-top: 20px;
+  font-style: 25px;
+  font-weight: bold;
 }
